@@ -13,8 +13,9 @@ html {
 :root {
   --white: #fff;
   --white0: 255, 255,255;
-  --black: #000;
-  --red: #c51f0d;
+  --blue2: rgb(198, 222, 254);
+  --black: rgb(0, 0, 0);
+  --blue: #40649b;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -333,7 +334,11 @@ template {
     Typography
 ============= */
 h1 {
-  font-family: "Righteous", cursive;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+button {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 /* =============
@@ -371,37 +376,54 @@ textarea {
   height: 80vh;
   background-size: cover;
   background-position: center bottom;
+}
+@media (min-width: 768px) {
+  #hero {
+    height: 70vh;
+  }
+}
+@media (min-width: 1024px) {
+  #hero {
+    height: 80vh;
+  }
+}
+#hero #overlay {
+  background-color: rgba(50, 71, 110, 0.5);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-#hero h1 {
+#hero #overlay h1 {
   color: var(--white);
   margin: 0;
   font-size: 2.5rem;
 }
 @media (min-width: 768px) {
-  #hero h1 {
+  #hero #overlay h1 {
     font-size: 5.625rem;
   }
 }
-#hero h1 span {
-  color: rgba(var(--white0), 0.25);
+#hero #overlay h1 span {
+  color: var(--blue2);
 }
-#hero button {
+#hero #overlay button {
   border: none;
-  background-color: var(--red);
+  background-color: var(--blue);
   color: var(--white);
-  padding: 20px 40px;
+  padding: 30px 40px;
   border-radius: 8px;
   margin-top: 24px;
   font-size: 1.25rem;
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  #hero button {
+  #hero #overlay button {
     padding: 30px 50px;
     font-size: 1.5625rem;
   }
+}
+#hero #overlay button i {
+  margin-left: 8px;
 }
