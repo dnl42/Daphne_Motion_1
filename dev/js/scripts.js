@@ -5,30 +5,47 @@ import $ from "jquery";
 gsap.registerPlugin(ScrollTrigger);
 
 
-// function scrollAnimation(){
-    // var tl = gsap.timeline();
-    // tl.to("#history", {
         ScrollTrigger.create({
             trigger: "#history-first",
             start: "top top",
             pin:true,
             pinSpacing:false,
-            markers: true
+            markers: false
     });
 
-    ScrollTrigger.create({
-        trigger: "#gallery-1",
-        start: "top top",
-        scale: 2,
-        pin:true,
-        pinSpacing:false,
-        markers: true
-});
-    // return tl;
-// }
+function ImageAnimation(){
+    var tl = gsap.timeline({scrollTrigger:{
+        trigger:"#skynet", 
+        markers: false, 
+        scrub:2,
+        end:"center center"}});
+    tl.from("#gallery-1", {duration: 1, delay: 1, opacity: 0})
+    tl.from("#gallery-2", {duration: 1, delay: .25, opacity: 0})
+    tl.from("#gallery-3", {duration: 1, delay: .25, opacity: 0})
+    tl.from("#gallery-4", {duration: 1, delay: .25, opacity: 0})
+    tl.from("#gallery-5", {duration: 1, delay: .25, opacity: 0})
+    tl.from("#gallery-6", {duration: 1, delay: .25, opacity: 0})
+    
+    return tl;
+}
 
-// var mainTL = gsap.timeline();
-// mainTL.add(scrollAnimation());
+gsap.from(".yellow-bar", {
+    scrollTrigger: {
+      trigger: ".yellow-bar",
+      scrub: true,
+      start: "top bottom",
+      end: "center center"
+    },
+    scaleX: 0,
+    transformOrigin: "left center", 
+    ease: "none"
+  });
+
+var mainTL = gsap.timeline();
+mainTL.add(ImageAnimation());
+
+
+
 
 
 let $nav = $('nav[data-nav]');
