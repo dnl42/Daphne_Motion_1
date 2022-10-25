@@ -2,7 +2,7 @@
     Header
 ============= */
 header {
-    background-color: $white;
+    background-color: var(--white);
     left: 0;
     position: fixed;
     top: 0;
@@ -26,7 +26,7 @@ header {
             text-align: right;
 
            button {
-                background-color: $yellow;
+                background-color: var(--yellow);
                 border-radius: 23px;
                 color: $black;
                 display: inline-block;
@@ -62,7 +62,7 @@ header {
         }
 
         #nav-container {
-            background-color: $charcoal;
+            background-color: var(--charcoal);
             display: none;
             grid-area: nav;
             padding: 20px 10px 10px;
