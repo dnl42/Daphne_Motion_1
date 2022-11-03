@@ -21,9 +21,9 @@ function simpleMotion(){
       .to("#bottom-ball",{x:0, duration:0.25},"rollOut")
       .to("#top-ball",{x:0, duration:0.25},"rollOut")
       .fromTo("#center-line",{drawSVG:"50% 50%"},{duration:0.25, drawSVG: "0% 100%"},"rollOut")
-      .from("#light-green",{duration: 0.25, scale:0, transformOrigin: "-50"},"-=50%")
-      .from("#dark-green",{duration: 0.25, scale:0, transformOrigin: "150"},"-=50%")
-      .from("#yellow",{scale:0, duration:1, transformOrigin: "center", drawSVG:"0% 0%"},"rollOut")
+      .from("#light-green",{duration: 1, scale:0, transformOrigin: "-50"},"-=50%")
+      .from("#dark-green",{duration: 1, scale:0, transformOrigin: "150"},"-=50%")
+      .from("#yellow",{scale:0, duration:1, transformOrigin: "bottom", drawSVG:"0% 0%"},"rollOut")
     
 
     return tl;
