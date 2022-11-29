@@ -22,6 +22,21 @@ function Shapes(){
     return tl;
 }
 
+function Grow(){
+
+    var tl = gsap.timeline();
+    tl.to("#shape3", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+    // tl.to("#shape4", {scaleX:"1", scaleY:"5", transformOrigin:"center bottom", duration: 1.25, x:-1200, y: -1200})
+    tl.to("#shape5", {scaleY:"10", transformOrigin:"bottom right", duration: 1.25, y:-1200})
+    // tl.to("#shape6", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+    // tl.to("#shape7", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+    // tl.to("#shape8", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+    // tl.to("#shape1", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+    // tl.to("#shape2", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+
+    return tl;
+}
+
 
 function Droon(){
     var tl = gsap.timeline();
@@ -30,23 +45,25 @@ function Droon(){
 }
 
 
-function Rectangles(){
+// function Rectangles(){
 
-    var tl = gsap.timeline();
-    // tl.to("#shape3",1, {morphSVG:"#rectangle3", transformOrgign:"center right"})
-    // tl.set("#rectangles",{visibility: "hidden"})
-    tl.to("#rectangle3",{autoAlpha:1, duration:1, x:-1200, y:0})
-    tl.to("#rectangle4",{autoAlpha:1, duration:1, delay:-0.60, x: -1200, y:-1200})
-    tl.to("#rectangle5",{autoAlpha:1, duration:1, delay:-0.60, x:0, y:-1200})
-    tl.to("#rectangle6",{autoAlpha:1, duration:1, delay:-0.60, x:1200, y:-1200})
-    tl.to("#rectangle7",{autoAlpha:1, duration:1, delay:-0.60, x:1200, y:0})
-    tl.to("#rectangle8",{autoAlpha:1, duration:1, delay:-0.60, x:1200, y:1200})
-    tl.to("#rectangle1",{autoAlpha:1, duration:1, delay:-0.60, x:0, y:1200})
-    tl.to("#rectangle2",{autoAlpha:1, duration:1, delay:-0.60, x:-1200, y:1200})
+//     // gsap.set(".rectangles", {visibility: "hidden"})
+
+//     var tl = gsap.timeline();
+//     // tl.to("#shape3",1, {morphSVG:"#rectangle3", transformOrgign:"center right"})
+//     // tl.set("#rectangles",{visibility: "hidden"})
+//     tl.to("#rectangle3",{ duration:1, x:-1200, y:0})
+//     tl.to("#rectangle4",{ duration:1, delay:-0.60, x: -1200, y:-1200})
+//     tl.to("#rectangle5",{ duration:1, delay:-0.60, x:0, y:-1200})
+//     tl.to("#rectangle6",{autoAlpha:0, duration:1, delay:-0.60, x:1200, y:-1200})
+//     tl.to("#rectangle7",{autoAlpha:0, duration:1, delay:-0.60, x:1200, y:0})
+//     tl.to("#rectangle8",{autoAlpha:0, duration:1, delay:-0.60, x:1200, y:1200})
+//     tl.to("#rectangle1",{autoAlpha:0, duration:1, delay:-0.60, x:0, y:1200})
+//     tl.to("#rectangle2",{autoAlpha:0, duration:1, delay:-0.60, x:-1200, y:1200})
     
 
-    return tl;
-}
+//     return tl;
+// }
 
 
 GSDevTools.create();
@@ -54,4 +71,5 @@ GSDevTools.create();
 var mainTL = gsap.timeline();
 mainTL.add(Shapes())
 mainTL.add(Droon())
-mainTL.add(Rectangles())
+// mainTL.add(Rectangles())
+mainTL.add(Grow())
