@@ -8,6 +8,26 @@ gsap.registerPlugin(MorphSVGPlugin);
 
 MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
 
+
+
+// function Shrink(){
+
+//     var tl = gsap.timeline();
+//     tl.from(".dome", {scale:"0"})
+
+//     return tl;
+// }
+
+function Morph(){
+
+    var tl = gsap.timeline();
+    tl.to(".snowflake", {duration:2, morphSVG: ".dome"})
+
+    return tl;
+
+}
+
+
 function Shapes(){
 
     var tl = gsap.timeline();
@@ -28,14 +48,15 @@ function Grow(){
     tl.to("#shape3", {scaleX:"10", transformOrigin:"bottom center", duration: .75, x:-2200})
     tl.to("#shape4", {scaleX:"1", scaleY:"1", transformOrigin:"center", duration: .75, x:-1200, y: -1200})
     tl.to("#shape5", {scaleY:"10", transformOrigin:"bottom center", duration: .75, y:-1200})
-    // tl.to("#shape6", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+    tl.to("#shape6", {scaleX:"1", scaleY:"1", transformOrigin:"center", duration: .75, x:1200, y: -1200})
     tl.to("#shape7", {scaleX:"10", transformOrigin:"bottom center", duration: .75, x:2200})
-    // tl.to("#shape8", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+    tl.to("#shape8", {scaleX:"1", scaleY:"1", transformOrigin:"center", duration: .75, x:1200, y: 1200})
     tl.to("#shape1", {scaleY:"10", transformOrigin:"bottom center", duration: .75, y:2200})
-    // tl.to("#shape2", {scaleX:"10", transformOrigin:"bottom right", duration: 1.25, x:-1200})
+    tl.to("#shape2", {scaleX:"1", scaleY:"1", transformOrigin:"center", duration: .75, x:-1200, y: 1200})
 
     return tl;
 }
+
 
 
 function Droon(){
@@ -69,7 +90,9 @@ function Droon(){
 GSDevTools.create();
 
 var mainTL = gsap.timeline();
-mainTL.add(Shapes())
-mainTL.add(Droon())
+mainTL.add(Morph());
+// mainTL.add(Shrink())
+mainTL.add(Shapes());
+mainTL.add(Droon());
 // mainTL.add(Rectangles())
-mainTL.add(Grow())
+mainTL.add(Grow());
