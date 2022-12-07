@@ -18,14 +18,15 @@ MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
 //     return tl;
 // }
 
-function Morph(){
+function Snowflake(){
 
     var tl = gsap.timeline();
-    tl.to(".snowflake", {duration:2, morphSVG: ".dome"})
+    tl.from("#snowflake", {duration:1, scale:0, rotate:720, transformOrigin:"center"},"spin")
 
+    
     return tl;
-
 }
+
 
 
 function Shapes(){
@@ -90,7 +91,7 @@ function Droon(){
 GSDevTools.create();
 
 var mainTL = gsap.timeline();
-mainTL.add(Morph());
+mainTL.add(Snowflake());
 // mainTL.add(Shrink())
 mainTL.add(Shapes());
 mainTL.add(Droon());
