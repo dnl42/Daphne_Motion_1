@@ -26,26 +26,26 @@ function Shapes(){
     return tl;
 }
 
-function Plants(){
+// function Plants(){
 
-    var tl = gsap.timeline();
-    tl.from("#Plants",{alpha:0, scale:0, transformOrigin: "center"})
-    tl.to("#Plants",{duration:.5, scale:2, transformOrigin: "center"})
+//     var tl = gsap.timeline();
+//     tl.from("#Plants",{alpha:0, scale:0, transformOrigin: "center"})
+//     tl.to("#Plants",{duration:.5, scale:2, transformOrigin: "center"})
 
-    tl.from("#oak", 1,{alpha: 0, morphSVG: "#fern"})
-    tl.from("#fern", 1,{alpha: 0, morphSVG: "#skinnyFern"})
-    tl.from("#skinnyFern", 1,{alpha: 0, morphSVG: "plant1"})
-    tl.from("#plant1", 1,{alpha: 0, morphSVG: "#plant2"})
-    tl.from("#plant2", 1,{alpha: 0, morphSVG: "#flower"})
+//     tl.from("#oak", 1,{alpha: 0, morphSVG: "#fern"})
+//     tl.from("#fern", 1,{alpha: 0, morphSVG: "#skinnyFern"})
+//     tl.from("#skinnyFern", 1,{alpha: 0, morphSVG: "plant1"})
+//     tl.from("#plant1", 1,{alpha: 0, morphSVG: "#plant2"})
+//     tl.from("#plant2", 1,{alpha: 0, morphSVG: "#flower"})
 
-    return tl;
-}
+//     return tl;
+// }
 
 
 function Name(){
 
     var tl = gsap.timeline();
-    tl.to("#WORD", {drawSVG:"100%", duration:2, stagger:0.2})
+    tl.to("#WORD", {duration:1, drawSVG:"100%"})
 
 
     return tl;
@@ -59,6 +59,6 @@ GSDevTools.create();
 
 var mainTL = gsap.timeline();
 mainTL.add(Shapes())
-mainTL.add(Plants())
+// mainTL.add(Plants())
 mainTL.add(Name())
 
