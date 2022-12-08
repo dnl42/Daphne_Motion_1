@@ -49,8 +49,9 @@ function Grow(){
     tl.to("#shape2", {duration: .75, x:300, y:0}, "-=0.75")
     tl.to("#rectangle2", {scaleY: "5", transformOrigin:"bottom", duration: .75, x:300, y:0}, "-=0.75")
 
-    tl.from("#clip",{duration: .5, scale: 0}, "-=0.75")
-    tl.to("#clip",{duration: .5, scale: 9, transformOrigin: "center"}, "-=0.50")
+   
+    tl.from("#clip",{duration: .5, scale: 0}, "-=0.5")
+    tl.to("#clip",{duration: .5, scale: 10, transformOrigin: "center"}, "-=0.50")
 
     
   
@@ -60,15 +61,15 @@ function Grow(){
    
     tl.to("#snowflake",{duration: .5, rotate:-180, transformOrigin: "center"},"spin", "-=3")
 
-    tl.to("#shape4",{duration: 0.25, scaleX:"3", transformOrigin:"center"}, "-=0.5")
-    tl.to("#shape6",{duration:0.25, scaleY:"3", transformOrigin:"center"},"-=0.5")
-    tl.to("#shape8",{duration: 0.25, scaleX:"3", transformOrigin:"center"},"-=0.5")
-    tl.to("#shape2",{duration:0.25, scaleY:"3", transformOrigin:"center"},"-=0.5")
+    tl.to("#shape4",{duration: 0.25, scaleX:"3.5", transformOrigin:"center"}, "-=0.5")
+    tl.to("#shape6",{duration:0.25, scaleY:"3.5", transformOrigin:"center"},"-=0.5")
+    tl.to("#shape8",{duration: 0.25, scaleX:"3.5", transformOrigin:"center"},"-=0.5")
+    tl.to("#shape2",{duration:0.25, scaleY:"3.5", transformOrigin:"center"},"-=0.5")
 
-    tl.to("#shape3",{duration:0.25, transformOrigin:"center"},"-=0.25")
-    tl.to("#shape5",{duration:0.25, transformOrigin:"center"},"-=0.25")
-    tl.to("#shape7",{duration:0.25, transformOrigin:"center"},"-=0.25")
-    tl.to("#shape1",{duration:0.25, transformOrigin:"center"},"-=0.25")
+    tl.to("#shape3",{duration:0.25, scaleX: 2, scaleY:2, transformOrigin:"center"},"-=0.5")
+    tl.to("#shape5",{duration:0.25, scaleX: 2, scaleY:2, transformOrigin:"center"},"-=0.5")
+    tl.to("#shape7",{duration:0.25, scaleX: 2, scaleY:2, transformOrigin:"center"},"-=0.5")
+    tl.to("#shape1",{duration:0.25, scaleX: 2, scaleY:2, transformOrigin:"center"},"-=0.5")
     
     tl.to(".domes",{duration:.2, scaleX:1, scaleY:1})
     return tl;
@@ -78,7 +79,8 @@ function Grow(){
 function Shapes(){
 
     var tl = gsap.timeline();
-    tl.to(".domes",{duration:1, rotate:180, transformOrigin:"center"})
+    tl.to(".domes",{duration:1, rotate:-180, transformOrigin:"center"})
+    tl.to("#snowflake", {duration: .5, rotate:-1},"-=1")
     return tl;
 }
 
