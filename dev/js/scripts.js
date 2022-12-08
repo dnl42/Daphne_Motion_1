@@ -26,26 +26,76 @@ function Shapes(){
     return tl;
 }
 
-// function Plants(){
+function Plants(){
 
-//     var tl = gsap.timeline();
-//     tl.from("#Plants",{alpha:0, scale:0, transformOrigin: "center"})
-//     tl.to("#Plants",{duration:.5, scale:2, transformOrigin: "center"})
+    var tl = gsap.timeline();
+    tl.from("#Plants",{alpha:0, scale:0, transformOrigin: "center"})
+    tl.to("#Plants",{scale:2, transformOrigin: "center"})
 
-//     tl.from("#oak", 1,{alpha: 0, morphSVG: "#fern"})
-//     tl.from("#fern", 1,{alpha: 0, morphSVG: "#skinnyFern"})
-//     tl.from("#skinnyFern", 1,{alpha: 0, morphSVG: "plant1"})
-//     tl.from("#plant1", 1,{alpha: 0, morphSVG: "#plant2"})
-//     tl.from("#plant2", 1,{alpha: 0, morphSVG: "#flower"})
+    tl.fromTo("#oak", {alpha: 0, duration:.25}, {alpha: 1}, "-=1")
+    tl.fromTo("#fern", {alpha: 0, duration:.25}, {alpha: 1})
+    tl.to("#oak", {duration: .5, alpha: 0, morphSVG: "#fern"}, "-=.5")
 
-//     return tl;
-// }
+    tl.fromTo("#plant2", {alpha: 0, duration:.25}, {alpha: 1})
+    tl.to("#fern", {duration: .5, alpha: 0, morphSVG: "#plant2"}, "-=.5")
+
+    tl.fromTo("#plant1", {alpha: 0, duration:.25}, {alpha: 1})
+    tl.to("#plant2", {duration: .5, alpha: 0, morphSVG: "#plant1"}, "-=.5")
+ 
+    tl.fromTo("#skinnyFern", {alpha: 0, duration:.25}, {alpha: 1})
+    tl.to("#plant1", {duration: .5, alpha: 0, morphSVG: "#skinnyFern"}, "-=.5")
+
+    tl.fromTo("#flower", {alpha: 0, duration:.25}, {alpha: 1})
+    tl.to("#skinnyFern", {duration: .5, alpha: 0, morphSVG: "#flower"}, "-=.5")
+
+
+
+
+    return tl;
+}
 
 
 function Name(){
 
     var tl = gsap.timeline();
-    tl.to("#WORD", {duration:1, drawSVG:"100%"})
+    tl.from("#B", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#A", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#R", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#T", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#R2", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#A2", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#M", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#apostrophe", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#S", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#G", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#A3", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#R3", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#D", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#E", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+    tl.from("#N", {duration:.5, drawSVG:"0% 0%"},"-=.5")
+
+    tl.fromTo("#flower", {alpha:1}, {alpha:0},"-=.75")
+
+    tl.to("#B", {fill:"#859272", duration:.25})
+    tl.to("#A", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#R", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#T", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#R2", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#A2", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#M", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#apostrophe", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#S", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#G", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#A3", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#R3", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#D", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#E", {fill:"#859272", duration:.25},"-=.2")
+    tl.to("#N", {fill:"#859272", duration:.25},"-=.2")
+
+    tl.fromTo("#BMask", {alpha:0, duration: .5}, {alpha:1}, "-=.5")
+    tl.to("#BMask", {duration: .5, scale:1.5, transformOrigin:"center"},"-=.5")
+    tl.to("#WORD", {duration: .5, scale:1.5, transformOrigin:"center", y:30 },"-=.5")
+
 
 
     return tl;
@@ -59,6 +109,6 @@ GSDevTools.create();
 
 var mainTL = gsap.timeline();
 mainTL.add(Shapes())
-// mainTL.add(Plants())
+mainTL.add(Plants())
 mainTL.add(Name())
 
