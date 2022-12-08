@@ -21,11 +21,11 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/deploy\/img\/my logo (3).svg" : {
+    "\/deploy\/img\/droon (6).svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
-      "oAP" : "\/deploy\/img\/my logo (3).svg",
+      "oAP" : "\/deploy\/img\/droon (6).svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -50,13 +50,13 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/dev\/content\/CustomLogo.kit" : {
+    "\/dev\/content\/drawSVG.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/deploy\/drawSVG.html",
-      "oF" : 3
+      "oAP" : "\/dev\/content\/drawSVG.html",
+      "oF" : 0
     },
     "\/dev\/global\/footer.kit" : {
       "cB" : 0,
